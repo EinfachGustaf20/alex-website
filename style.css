@@ -1,0 +1,91 @@
+
+body {
+    background: linear-gradient(180deg, #005AC2 0%, #E5F4FF 100%);
+    min-height: 100vh;
+    /* Verhindert das Markieren von Text auf der Seite */
+    -webkit-user-select: none; /* Für ältere Chrome/Safari/Opera Versionen */
+    -moz-user-select: none;    /* Für ältere Firefox Versionen */
+    -ms-user-select: none;     /* Für ältere IE/Edge Versionen */
+    user-select: none;         /* Standard-Eigenschaft */
+}
+
+.error-code {
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: auto; /* oder ganz entfernen */
+    height: auto;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28.5vw;
+    line-height: 1004px;
+    
+    /* identical to box height */
+    letter-spacing: -0.09em;
+
+    background: linear-gradient(180deg, #FFFFFF 0%, #7AACE2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mascot-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*height: 650px;*/
+    height: 25vw;
+    width: auto;
+    transform: translate(-55%, -40%);
+    z-index: 10;
+}
+
+.ellipse {
+    position: absolute;
+    width: 15vw;  /* Ersetzt 490px, skaliert mit der Fensterbreite */
+    height: 2.5vw; /* Ersetzt 41px, behält das Seitenverhältnis bei */
+    left: 50%;
+    top: calc(50% + 12.5vw);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    background: rgba(0, 0, 0, 0.75);
+    filter: blur(3vw);
+}
+
+.home-button {
+    /* --- Layout & Positionierung --- */
+    
+    /* Display: inline-block erlaubt es, Breite/Höhe/Padding auf das Inline-Element (<a>) anzuwenden */
+    display: inline-block; 
+    
+    /* Entfernt den Standard-Unterstrich des Links */
+    text-decoration: none; 
+    
+    /* Padding ersetzt die feste Höhe und Breite des Rechtecks. 
+       Das Rechteck war 151px breit und 55px hoch, der Text war 132x27px. 
+       Padding sorgt für den nötigen Abstand um den Text herum. */
+    padding: 14px 25px; 
+    
+    /* Wir zentrieren den Button horizontal am unteren Rand (wie zuvor besprochen) */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px; /* Abstand vom unteren Rand */
+    z-index: 20;
+
+
+    /* --- Visuelle Stile (Rectangle 1) --- */
+    background: #FFFFFF;
+    border-radius: 15px;
+    
+
+    /* --- Typografie (Back to home) --- */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 20px; 
+    color: #575757;
+}
